@@ -10,7 +10,7 @@ const log = message => {
 //Skorsky-Global#3229
 client.ayarlar = { 
 "token": "", // token
-"prefix": "-", // prefix
+"prefix": "c!", // prefix
 "sahip": "582929812285554689",// sahip
 }
 

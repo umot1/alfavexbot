@@ -20,6 +20,10 @@ ${client.user} Kullanırken \`@Clarisa\` rolünü en yukarıda tutunuz.**
 > Basit Seviye, Seviye sıralaması & büyük 
 > depolama alan
 
+🆙 \`${client.ayarlar.prefix}oyunlar\`
+
+> Dene Ve Gör.
+
 🦋 \`${client.ayarlar.prefix}yardım2\` Menüsün de neler var?
 
 > Mute, Karantina, Ban, Toplu rol, Sayaç \`&\` Oto 
