@@ -7,8 +7,8 @@ exports.run = async (client, message, args) => {
   }
 
 let images = ['https://topg.org/image/461120/412323.gif', 'https://topg.org/image/461120/412323.gif'];
-message.channel.send(new Discord.MessageEmbed().setColor('#000001').setDescription(`**Alfa Ana Menüsüne Hoş Geldin Dostum :innocent:
-${client.user} Kullanırken \`@Alfa\` rolünü en yukarıda tutunuz.**
+message.channel.send(new Discord.MessageEmbed().setColor('#000001').setDescription(`**Clarisa Ana Menüsüne Hoş Geldin Dostum :innocent:
+${client.user} Kullanırken \`@Clarisa\` rolünü en yukarıda tutunuz.**
 **
 🐝 \`${client.ayarlar.prefix}kayıt-içerik\`
 
@@ -34,7 +34,7 @@ ${client.user} Kullanırken \`@Alfa\` rolünü en yukarıda tutunuz.**
 💸 Papara Hesap NO: \`Yakında\`
 
 
-💐 Alfa Bot :)
+💐 Clarisa Bot :)
 **`).setThumbnail(message.author.avatarURL() ? message.author.avatarURL({dynamic: true}) : 'https://media.discordapp.net/attachments/759022175444926514/773963799978967080/350kb_1.gif').setImage(images.random()))
 
 };

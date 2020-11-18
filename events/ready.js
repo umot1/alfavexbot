@@ -6,7 +6,7 @@ var prefix = arroiz.prefix;
 
 module.exports = async client => {
   
-  client.user.setPresence({ activity: { name: `Alfa V12 Uptime Botu`, type: "STREAMING", url: "TWİTCH URL" } })
+  client.user.setPresence({ activity: { name: `Clarisa V12 Uptime Botu`, type: "STREAMING", url: "TWİTCH URL" } })
   client.user.setStatus("online");
   console.log("Aktif!")
 };

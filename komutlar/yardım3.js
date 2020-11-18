@@ -8,7 +8,7 @@ exports.run = async (client, message, args) => {
 
 let images = ['https://topg.org/image/461120/412323.gif', 'https://topg.org/image/461120/412323.gif'];
 message.channel.send(new Discord.MessageEmbed().setColor('#000001').setDescription(`**Yardım 3 Menüsüne Hoş Geldin Dostum 😇**
-\`\`\`${client.user.username} Kullanırken @Alfa rolünü en yukarıda tutunuz.\`\`\`
+\`\`\`${client.user.username} Kullanırken @Clarisa rolünü en yukarıda tutunuz.\`\`\`
 
 ❌ **\`${client.ayarlar.prefix}yasak-tag-sistem\`
 Sunucunuz için güvenliği arttırın
@@ -35,7 +35,7 @@ Sunucunuzda ki tüm **rolleri** silerek yardımcı olur (**Sunucu Sahibi**)
 💸 Papara Hesap NO: \`Yakında\`
 
 
-💐 Alfa Bot :)
+💐 Clarisa Bot :)
 **`).setThumbnail(message.author.avatarURL() ? message.author.avatarURL({dynamic: true}) : 'https://topg.org/image/461120/412323.gif').setImage(images.random()))
 
 };

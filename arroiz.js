@@ -104,7 +104,7 @@ logs(client);
 
 
 client.on('ready', async () => {
-client.user.setPresence({ activity: { name: `Alfa V12 Uptime Botu`, type: "STREAMING", url: "TWİTCH URL" } })
+client.user.setPresence({ activity: { name: `Clarisa V12 Uptime Botu`, type: "STREAMING", url: "TWİTCH URL" } })
 client.user.setStatus('online');
 console.log(`${client.user.username} ismiyle bağlandım.`);
 })
@@ -151,13 +151,13 @@ let log = guild.channels.cach.eget(logFetch);
 if(oldUser.username === newUser.username) return;
 if(newUser.username.includes(tag) && !oldUser.username.includes(tag)) {
 log.send(new Discord.MessageEmbed()
-.setTitle('Alfa - TAG Alındı.')
+.setTitle('Clarisa - TAG Alındı.')
 .setDescription(`${newUser} **Aramıza hoşgeldin. \`${tag}\` tagını aldığı için ${role} rolü verildi!**`));
 guild.members.cache.get(newUser.id).roles.add(role.id);
 }
 if(oldUser.username.includes(tag) && !newUser.username.includes(tag)) {
 log.send(new Discord.MessageEmbed()
-.setTitle('Alfa - TAG Çıkarıldı.')
+.setTitle('Clarisa - TAG Çıkarıldı.')
 .setColor('#f1c335')
 .setDescription(`${newUser} **Aramızdan ayrıldı. \`${tag}\` tagını çıkardığı için ${role} rolü alındı!**`));
 guild.members.cache.get(newUser.id).roles.remove(role.id);
