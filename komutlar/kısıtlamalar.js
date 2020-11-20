@@ -5,23 +5,20 @@ exports.run = async (client, message, args) => {
 
 message.channel.send(new Discord.MessageEmbed()
 .setTitle('Clarisa Kısıtlı Koruma')
-.addField('Selam karşılama için', `\`\`\`${client.ayarlar.prefix}selam aç & ${client.ayarlar.prefix}selam kapat\`\`\``)
-.addField('Küfür Kısıtlamak', `\`\`\`${client.ayarlar.prefix}küfür kısıt & ${client.ayarlar.prefix}küfür kapat\`\`\``)
-.addField('Reklam Kısıtlamak', `\`\`\`${client.ayarlar.prefix}reklam kısıt & ${client.ayarlar.prefix}reklam kapat\`\`\``)
-.addField('Büyük Harf Kısıtlamak', `\`\`\`${client.ayarlar.prefix}caps kısıt & ${client.ayarlar.prefix}caps kapat\`\`\``)
-.addField("️:tools: Selam karşılama için"," Selam aç/kapat",true)
-.addField(":tools: c!yardım-guvenlik"," Güvenlik Sistemini Görürsünüz.",true)
-.addField(":tools: c!yardım-eglence"," Eğlence Sistemini Görürsünüz.(Yakında)",true)                     
-.setThumbnail(message.author.avatarURL() ? message.author.avatarURL({dynamic: true}) : 'https://cdn.glitch.com/8e70d198-9ddc-40aa-b0c6-ccb4573f14a4%2F6499d2f1c46b106eed1e25892568aa55.png'));
+.addField("️:tools: c!Selam aç/kapat","Selam karşılama sistemini ayarlarsınız.",true)
+.addField(":tools: c!küfür aç/kapat","Küfür Kısıtlamak.",true)
+.addField(":tools: c!reklam aç/kapat","Reklam Kısıtlamak",true)
+.addField(":tools: c!caps aç/kapat","Büyük Harf Kısıtlamak",true)                    
+.setThumbnail(message.author.avatarURL() ? message.author.avatarURL({dynamic: true}) : 'botresim'));
 
 };
 exports.conf = {
   enabled: true,
   guildOnly: true,
-  aliases: [],
+  aliases: ["yardim-kısmod"],
   permLevel: 0
 }
 
 exports.help = {
-  name: 'kısıtlamalar'
+  name: 'yardım-kismod'
 };

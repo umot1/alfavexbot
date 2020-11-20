@@ -6,7 +6,7 @@ module.exports.run = async (client, message, args) => {
 .setColor("#6d09e8")
 .setDescription(`:joy: Botumuz İsteklerinizle Güzelleşiyor`)
 .addField("️:tools: c!yardim-kayit"," Kayıt Sistemini Görürsünüz.",true)
-.addField(":tools: c!yardım-kisitlamalar"," Kisitlama Sistemini Görürsünüz.",true)
+.addField(":tools: c!yardım-kısmod"," Kisitlama Sistemini Görürsünüz.",true)
 .addField(":tools: c!yardım-eglence"," Eğlence Sistemini Görürsünüz.(Yakında)",true)
     message.channel.send(YeniYardımMenüm)
 

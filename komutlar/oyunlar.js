@@ -1,36 +1,28 @@
 const Discord = require('discord.js');
+const data = require('quick.db');
 
 exports.run = async (client, message, args) => {
-  Array.prototype.random = function() {
-    return this[Math.floor(Math.random() * this.length)];
-  }
-let images = ['https://cdn.glitch.com/4ea1e74d-1c99-490a-9c13-d46ec11bc464%2F2ivyan7.gif', 'https://cdn.glitch.com/4ea1e74d-1c99-490a-9c13-d46ec11bc464%2Fcloudup-oyular.gif', 'https://cdn.glitch.com/4ea1e74d-1c99-490a-9c13-d46ec11bc464%2Fcloudupp-oyunn.gif']
-message.channel.send(new Discord.MessageEmbed().setAuthor(client.user.username+' oyunlar', message.author.avatarURL() ? message.author.avatarURL({dynamic: true}) : 'https://cdn.glitch.com/8e70d198-9ddc-40aa-b0c6-ccb4573f14a4%2F6499d2f1c46b106eed1e25892568aa55.png').setThumbnail(images.random())
-.setColor('#cbfd54').setDescription(`1️⃣ \`${client.ayarlar.prefix}kaçcm\`
 
-2️⃣ \`${client.ayarlar.prefix}karıştır\`
-
-3️⃣ \`${client.ayarlar.prefix}öp\`
-
-4️⃣ \`${client.ayarlar.prefix}kare\`
-
-5️⃣ \`${client.ayarlar.prefix}tokat\`
-
-6️⃣ \`${client.ayarlar.prefix}soda\`
-
-7️⃣ \`${client.ayarlar.prefix}aşk\`
-
-8️⃣ \`${client.ayarlar.prefix}fal\`
-`).addField('❕ Yavaş kullanım!', '**Oyun komutlarının bazıların da yavaş kullanım vardır.**'));
+message.channel.send(new Discord.MessageEmbed()
+.setTitle('Clarisa Kısıtlı Koruma')
+.addField("️:tools: c!fal","Dene Ve Gör",true)
+.addField(":tools: c!aşk","Dene Ve Gör",true)
+.addField(":tools: c!soda","Dene Ve Gör",true)
+.addField(":tools: c!tokat","Dene Ve Gör",true)   
+.addField("️:tools: c!kare","Dene Ve Gör",true)
+.addField(":tools: c!öp","Dene Ve Gör",true)
+.addField(":tools: c!karıştır","Dene Ve Gör",true)
+.addField(":tools: c!kaçcm","Dene Ve Gör",true)                      
+.setThumbnail(message.author.avatarURL() ? message.author.avatarURL({dynamic: true}) : 'botresim'));
 
 };
 exports.conf = {
   enabled: true,
   guildOnly: true,
-  aliases: ["yardim-eğlence","yardim-oyunlar"],
+  aliases: ["yardim-eğlence"],
   permLevel: 0
 }
 
 exports.help = {
-  name: 'yardim-eglence'
+  name: 'yardım-eglence'
 };
