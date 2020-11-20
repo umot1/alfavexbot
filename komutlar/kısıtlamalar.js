@@ -17,6 +17,7 @@ message.channel.send(new Discord.MessageEmbed()
 .addField(":tools: c!sunucu-tema-sistem","Topluluk bağışları ile sunucu şablonlarına sahip ol!",true)
 .addField(":tools: c!kanal arındır","Sunucunuzda ki tüm **Kanalları** silerek yardımcı olur (**Sunucu Sahibi**)",true)
 .addField(":tools: c!rol arındır","Sunucunuzda ki tüm **Rolleri** silerek yardımcı olur (**Sunucu Sahibi**)",true)
+.addField(":tools: c!oylama","Oylama Yapar",true)                     
                      
 .setThumbnail(message.author.avatarURL() ? message.author.avatarURL({dynamic: true}) : 'botresim'));
 

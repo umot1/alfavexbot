@@ -453,7 +453,9 @@ if(!chimped) return;
 let command = chimped.find(a => a.command === message.content.toLocaleLowerCase());
 if(command) {
 message.channel.send(`${message.author} ${command.respond}`);
-};// CHAT LOG \
+};
+});
+// CHAT LOG \
 client.on("messageDelete", async message => {
   if (message.author.bot) return;
 
@@ -492,5 +494,4 @@ client.on("messageUpdate", async (oldMsg, newMsg) => {
     .setThumbnail(yapan.avatarURL);
   kanalbul.send(chatembed);
 });
-// CHAT LOG \\
 client.login(client.ayarlar.token);
