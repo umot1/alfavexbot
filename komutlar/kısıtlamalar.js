@@ -8,7 +8,10 @@ message.channel.send(new Discord.MessageEmbed()
 .addField("️:tools: c!selam aç/kapat","Selam karşılama sistemini ayarlarsınız.",true)
 .addField(":tools: c!küfür aç/kapat","Küfür Kısıtlamak.",true)
 .addField(":tools: c!reklam aç/kapat","Reklam Kısıtlamak",true)
-.addField(":tools: c!caps aç/kapat","Büyük Harf Kısıtlamak",true)                    
+.addField(":tools: c!caps aç/kapat","Büyük Harf Kısıtlamak",true)       
+.addField("️:tools: c!mute-sistem","Chat ve Seste mute için güzel sistem",true)
+.addField(":tools: c!jail-sistem","Etiketlediğiniz Üyeyi karantina altına al",true)
+.addField(":tools: c!ban-sistem","Etiketlediğiniz üyeyi sunucunuzdan yasaklarsınız",true)                     
 .setThumbnail(message.author.avatarURL() ? message.author.avatarURL({dynamic: true}) : 'botresim'));
 
 };

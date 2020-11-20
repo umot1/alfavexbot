@@ -8,6 +8,8 @@ module.exports.run = async (client, message, args) => {
 .addField("️:tools: c!yardim-kayit"," Kayıt Sistemini Görürsünüz.",true)
 .addField(":tools: c!yardım-kısmod"," Kisitlama Sistemini Görürsünüz.",true)
 .addField(":tools: c!yardım-eglence"," Eğlence Sistemini Görürsünüz.(Yakında)",true)
+.addField(":tools: c!nsfw"," NSFW Sistemini Görürsünüz.",true)
+  
     message.channel.send(YeniYardımMenüm)
 
     
