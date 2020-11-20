@@ -1,16 +1,34 @@
 const Discord = require('discord.js');
 
-exports.run = async (client, message, args) => {
-let user = message.mentions.users.first() || message.author;
-message.channel.send(new Discord.MessageAttachment(user.avatarURL({dynamic: true})));
+exports.run = (client, message, args) => {
+    
+    let user;
+	
+    if (message.mentions.users.first()) {
+      user = message.mentions.users.first();
+    } else {
+        user = message.author;
+    }
+    
+    const avatar = new Discord.RichEmbed()
+        .setColor("RANDOM")
+        .setAuthor("» Buyur Avatarın,")
+        .setImage(user.avatarURL)
+    message.channel.sendEmbed(avatar)
+    
 };
+
 exports.conf = {
-  enabled: true,
-  guildOnly: true,
-  aliases: ['avatar'],
-  permLevel: 0
-}
+  enabled: true, 
+  guildOnly: false, 
+  aliases: ["pp"],
+  permLevel: `Yetki gerekmiyor.` 
+};
 
 exports.help = {
-  name: 'av'
+  name: 'avatar',
+  category: 'kullanıcı',
+  description: 'Belirtilen Kişinin veya Komutu Yazan Kişinin Avatarını Atar.',
+  usage: 'c!avatar <@kişi-etiket> veya r?avatar'
 };
+//Wenzy Code

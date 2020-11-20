@@ -453,7 +453,44 @@ if(!chimped) return;
 let command = chimped.find(a => a.command === message.content.toLocaleLowerCase());
 if(command) {
 message.channel.send(`${message.author} ${command.respond}`);
-};
-});
+};// CHAT LOG \
+client.on("messageDelete", async message => {
+  if (message.author.bot) return;
 
+  var yapan = message.author;
+//Cross
+  var kanal = await db.fetch(`chatlog_${message.guild.id}`);
+  if (!kanal) return;
+  var kanalbul = message.guild.channels.find("name", kanal);
+//Cross
+  const chatembed = new Discord.RichEmbed()
+    .setColor("RANDOM")
+    .setAuthor(`Bir Mesaj Silindi!, yapan.avatarURL`)
+    .addField("Kullanıcı Tag", yapan.tag, true)
+    .addField("ID", yapan.id, true)
+    .addField("Silinen Mesaj", "" + message.content + "")
+    .setThumbnail(yapan.avatarURL);
+  kanalbul.send(chatembed);
+});
+//Cross
+client.on("messageUpdate", async (oldMsg, newMsg) => {
+  if (oldMsg.author.bot) return;
+
+  var yapan = oldMsg.author;
+
+  var kanal = await db.fetch(`chatlog_${oldMsg.guild.id}`);
+  if (!kanal) return;
+  var kanalbul = oldMsg.guild.channels.find("name", kanal);
+//Cross
+  const chatembed = new Discord.RichEmbed()
+    .setColor("RANDOM")
+    .setAuthor(`Bir Mesaj Düzenlendi!, yapan.avatarURL`)
+    .addField("Kullanıcı Tag", yapan.tag, true)
+    .addField("ID", yapan.id, true)
+    .addField("Eski Mesaj", "" + oldMsg.content + "")
+    .addField("Yeni Mesaj", "" + newMsg.content + "")
+    .setThumbnail(yapan.avatarURL);
+  kanalbul.send(chatembed);
+});
+// CHAT LOG \\
 client.login(client.ayarlar.token);
