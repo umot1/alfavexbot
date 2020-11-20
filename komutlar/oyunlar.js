@@ -19,10 +19,10 @@ message.channel.send(new Discord.MessageEmbed()
 exports.conf = {
   enabled: true,
   guildOnly: true,
-  aliases: ["yardim-eğlence"],
+  aliases: ["yardim-eğlence","yardım-eglence","yardim-eglence"],
   permLevel: 0
 }
 
 exports.help = {
-  name: 'yardım-eglence'
+  name: 'yardım-eğlence'
 };

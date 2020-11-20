@@ -5,7 +5,7 @@ exports.run = async (client, message, args) => {
 
 message.channel.send(new Discord.MessageEmbed()
 .setTitle('Clarisa Kısıtlı Koruma')
-.addField("️:tools: c!Selam aç/kapat","Selam karşılama sistemini ayarlarsınız.",true)
+.addField("️:tools: c!selam aç/kapat","Selam karşılama sistemini ayarlarsınız.",true)
 .addField(":tools: c!küfür aç/kapat","Küfür Kısıtlamak.",true)
 .addField(":tools: c!reklam aç/kapat","Reklam Kısıtlamak",true)
 .addField(":tools: c!caps aç/kapat","Büyük Harf Kısıtlamak",true)                    
@@ -15,7 +15,7 @@ message.channel.send(new Discord.MessageEmbed()
 exports.conf = {
   enabled: true,
   guildOnly: true,
-  aliases: ["yardim-kısmod"],
+  aliases: ["yardim-kısmod","yardım-kısmod"],
   permLevel: 0
 }
 
