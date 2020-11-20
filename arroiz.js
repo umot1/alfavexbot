@@ -332,7 +332,7 @@ client.on('message', async message => {
   
   client.on('message', async message => {
     if(message.channel.type !== 'text') return;
-  const reklam = await data.fetch(`reklam.${message.guild.id}`);
+  const reklam = await data.fetch(`reklamEngelcrosscode_${message.channel.id}`);
   if(!reklam) return;
   const blacklist = [".com", ".net", ".xyz", ".tk", ".pw", ".io", ".me", ".gg", "www.", "https", "http", ".gl", ".org", ".com.tr", ".biz", "net", ".rf.gd", ".az", ".party", "discord.gg"];
   const uyarılar = [
