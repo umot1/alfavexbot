@@ -9,6 +9,9 @@ message.channel.send(new Discord.MessageEmbed()
 .addField('Küfür Kısıtlamak', `\`\`\`${client.ayarlar.prefix}küfür kısıt & ${client.ayarlar.prefix}küfür kapat\`\`\``)
 .addField('Reklam Kısıtlamak', `\`\`\`${client.ayarlar.prefix}reklam kısıt & ${client.ayarlar.prefix}reklam kapat\`\`\``)
 .addField('Büyük Harf Kısıtlamak', `\`\`\`${client.ayarlar.prefix}caps kısıt & ${client.ayarlar.prefix}caps kapat\`\`\``)
+.addField("️:tools: Selam karşılama için"," Selam aç/kapat",true)
+.addField(":tools: c!yardım-guvenlik"," Güvenlik Sistemini Görürsünüz.",true)
+.addField(":tools: c!yardım-eglence"," Eğlence Sistemini Görürsünüz.(Yakında)",true)                     
 .setThumbnail(message.author.avatarURL() ? message.author.avatarURL({dynamic: true}) : 'https://cdn.glitch.com/8e70d198-9ddc-40aa-b0c6-ccb4573f14a4%2F6499d2f1c46b106eed1e25892568aa55.png'));
 
 };

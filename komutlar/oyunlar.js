@@ -27,10 +27,10 @@ message.channel.send(new Discord.MessageEmbed().setAuthor(client.user.username+'
 exports.conf = {
   enabled: true,
   guildOnly: true,
-  aliases: [],
+  aliases: ["yardim-eğlence","yardim-oyunlar"],
   permLevel: 0
 }
 
 exports.help = {
-  name: 'oyunlar'
+  name: 'yardim-eglence'
 };

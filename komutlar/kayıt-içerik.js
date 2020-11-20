@@ -58,5 +58,5 @@ exports.conf = {
 }
 
 exports.help = {
-  name: 'kayıt-içerik'
+  name: 'yardim-kayit'
 };

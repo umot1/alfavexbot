@@ -1,54 +1,27 @@
-const Discord = require('discord.js');
-const data = require('quick.db');
+const Discord = require ("discord.js")
 
-exports.run = async (client, message, args) => {
-  Array.prototype.random = function() {
-    return this[Math.floor(Math.random() * this.length)];
-  }
+module.exports.run = async (client, message, args) => {
 
-let images = ['https://topg.org/image/461120/412323.gif', 'https://topg.org/image/461120/412323.gif'];
-message.channel.send(new Discord.MessageEmbed().setColor('#000001').setDescription(`**Clarisa Ana Menüsüne Hoş Geldin Dostum :innocent:
-${client.user} Kullanırken \`@Clarisa\` rolünü en yukarıda tutunuz.**
-**
-🐝 \`${client.ayarlar.prefix}kayıt-içerik\`
+  const YeniYardımMenüm = new Discord.MessageEmbed()
+.setColor("#6d09e8")
+.setDescription(`:joy: Botumuz İsteklerinizle Güzelleşiyor`)
+.addField("️:tools: c!yardim-kayit"," Kayıt Sistemini Görürsünüz.",true)
+.addField(":tools: c!yardım-kisitlamalar"," Kisitlama Sistemini Görürsünüz.",true)
+.addField(":tools: c!yardım-eglence"," Eğlence Sistemini Görürsünüz.(Yakında)",true)
+    message.channel.send(YeniYardımMenüm)
 
-> Kayıt, Kutulu \`&\` Kutusuz, Diğer, Tag rol,
-> Koruma, Say, Aktiflik, Mesaj tag
-
-🆙 \`${client.ayarlar.prefix}seviye-sistem\`
-
-> Basit Seviye, Seviye sıralaması & büyük 
-> depolama alan
-
-🆙 \`${client.ayarlar.prefix}oyunlar\`
-
-> Dene Ve Gör.
-
-🦋 \`${client.ayarlar.prefix}yardım2\` Menüsün de neler var?
-
-> Mute, Karantina, Ban, Toplu rol, Sayaç \`&\` Oto 
-> rol, Kısıtlamalar
-
-🔥 \`${client.ayarlar.prefix}yardım3\` Menüsün de neler var?
-
-> Yasak tag, Oto isim, Komut mesaj, Fake hesap, 
-> Sunucu tema, Kanal arındır \`&\` Rol arındır
-
-💸 İninal Barkod NO: \`Yakında\`
-💸 Papara Hesap NO: \`Yakında\`
-
-
-💐 Clarisa Bot :)
-**`).setThumbnail(message.author.avatarURL() ? message.author.avatarURL({dynamic: true}) : 'https://media.discordapp.net/attachments/759022175444926514/773963799978967080/350kb_1.gif').setImage(images.random()))
-
+    
 };
-exports.conf = {
-  enabled: true,
-  guildOnly: true,
-  aliases: ['y', 'help'],
-  permLevel: 0
-}
 
-exports.help = {
-  name: 'yardım'
+module.exports.conf = {
+  enabled: true,
+  guildOnly: false,
+  aliases: ["y","help","h"],
+  permLevel: 0
+};
+
+module.exports.help = {
+  name: 'yardım',
+  description: 'Botta bulunan tüm komutları gösterir',
+  usage: 'komutlar'
 };

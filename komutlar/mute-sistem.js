@@ -43,5 +43,5 @@ exports.conf = {
 }
 
 exports.help = {
-  name: 'mute-sistem'
+  name: 'yardim-mute'
 };
