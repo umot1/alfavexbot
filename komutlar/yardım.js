@@ -6,10 +6,11 @@ module.exports.run = async (client, message, args) => {
 .setColor("#6d09e8")
 .setDescription(`:joy: Botumuz İsteklerinizle Güzelleşiyor`)
 .addField("️:tools: c!yardim-kayit"," Kayıt Sistemini Görürsünüz.",true)
-.addField(":tools: c!yardım-kısmod"," Kisitlama Sistemini Görürsünüz.",true)
-.addField(":tools: c!yardım-eglence"," Eğlence Sistemini Görürsünüz.(Yakında)",true)
+.addField(":tools: c!yardım-mod"," Moderasyon Sistemini Görürsünüz.",true)
+.addField(":tools: c!yardım-eglence"," Eğlence Sistemini Görürsünüz.",true)
 .addField(":tools: c!nsfw"," NSFW Sistemini Görürsünüz.",true)
-  
+.addField(":joy: İninal Barkod NO: \`Yakında\` :joy:",true)
+.addField(":joy: Papara Hesap NO: \`Yakında\` :joy:",true)  
     message.channel.send(YeniYardımMenüm)
 
     

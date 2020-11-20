@@ -17,7 +17,7 @@ module.exports.run = async (client, message, args) => {
 .addField(":tools: c!aktiflik aç/kapat","(c!profile & c!profile [@etiket]**) **- ne kadar kayıt etmiş bilgilerini görebilirsin",true)   
 .addField("️:tools: c!toplu-rol-sistem"," Toplu Rol Sistemini Görürsünüz.",true) 
 .addField("️:tools: c!yasak-tag-sistem","Sunucunuz için güvenliği arttırın.",true)  
-.addField("️:tools: c!toplu-rol-sistem"," Kayıt Sistemini Görürsünüz.",true)  
+.addField("️:tools: c!oto-isim-sistem","Sunucunuza giren kullanıcıya istediğiniz şekilde otomatik isim ile adlandırmış yapabilirsin.",true)  
 .addField("️:tools: c!toplu-rol-sistem"," Kayıt Sistemini Görürsünüz.",true)    
   
     message.channel.send(YeniYardımMenüm)
