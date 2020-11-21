@@ -4,7 +4,7 @@ const stripIndents = require('common-tags').stripIndents
 const db = require('quick.db');
 exports.run = async(client, message, args) => {
     var soru = args.join(' ');
-    if(!soru) return message.reply('Bir işlem belirtin. `-hesapla <işlem>`')
+    if(!soru) return message.reply('Bir işlem belirtin. `c!hesapla <işlem>`')
     else {
         try {
         let cevap = math.eval(soru)
