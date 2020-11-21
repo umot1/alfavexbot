@@ -8,28 +8,25 @@ if(message.author.id !== ayarlar.sahip) return message.channel.send(" Bu komutu 
 
  const args0 = args[0];
   if(!args0) {
-    message.channel.send(message.author.username + ", lütfen bir sunucu **id**'si yaz!")
+    message.channel.send(message.author.username + ", Sunucu **id** yaz!")
   } else {
   
- 
-db.delete(`premod_${args0}`,"deaktif")
-message.channel.send("premium başarıyla alındı")
- 
+db.set(`premod_${args0}`, "aktif")
+  message.channel.send(" Başarıyla premium verildi.")
 }
-};
-
-
+  }
+    
 exports.conf = {
     enabled: true,
     guildOnly: false,
-    aliases: ['premium-al'],
+    aliases: ['premium-ver'],
     permLevel: 4,
       
 }
 
 exports.help = {
-    name: 'premiumal',
-    description: 'premiumal',
-    usage: 'premiumal',
+    name: 'premiumver',
+    description: '',
+    usage: '',
 
 }
