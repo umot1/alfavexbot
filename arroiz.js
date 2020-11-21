@@ -9,7 +9,7 @@ const log = message => {
 };
 //Skorsky-Global#3229
 client.ayarlar = { 
-"token": "Nzc3Mjg1MTA4Mjg1MTc3ODg2.X7BNKw.NivNPLaqj1xHCiGKaTGrKPpy3cc", // token
+"token": "", // token
 "prefix": "c!", // prefix
 "sahip": "582929812285554689",// sahip
 }
@@ -88,7 +88,6 @@ client.elevation = message => {
   if (message.member.permissions.has("MANAGE_MESSAGES")) permlvl = 1;
   if (message.member.permissions.has("BAN_MEMBERS")) permlvl = 2;
   if (message.member.permissions.has("ADMINISTRATOR")) permlvl = 2;
-  if (message.author.id === message.guild.owner.id) permlvl = 4;
   return permlvl;
 };
 
