@@ -9,7 +9,7 @@ const log = message => {
 };
 //Skorsky-Global#3229
 client.ayarlar = { 
-"token": "", // token
+"token": "Nzc3Mjg1MTA4Mjg1MTc3ODg2.X7BNKw.NivNPLaqj1xHCiGKaTGrKPpy3cc", // token
 "prefix": "c!", // prefix
 "sahip": "582929812285554689",// sahip
 }
