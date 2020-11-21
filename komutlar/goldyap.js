@@ -4,41 +4,26 @@ const client = new Discord.Client();
 const ayarlar = require("../ayarlar.json")
 
 exports.run = async (client, message, args) => {
-
-if(message.author.id != ayarlar.sahip) { return message.channel.send("❌ Sahibimin Komutunu Kullanamazsın")}
+ if (!message.guild) {
+  return }    
+if (message.author.id != ayarlar.sahip) return message.channel.send("Bu Komutu Sadece Botun Sahibi Kullanabilir!");
 
   let nesne = args[0]
-
   if (!nesne) return message.channel.send('Bir kullanıcının IDsini girmelisin?')
-
+  
   db.set(`gold_${nesne}`, 'gold')
-
-
-
-  message.channel.send(`\`${nesne}\` IDli kullanıcı artık gold üye oldu!`)
-
-
+  
+  client.channels.get('777239282535628800').send(`\`${nesne}\` ID Kullanıcı Artık Pre Üye <:639092965439963146:638808006674350119>`)
 
 }
-
 exports.conf = {
-
   enabled: true,
-
   guildOnly: false,
-
   aliases: [],
-
-  permLevel: 4
-
+  permLevel: 0
 };
-
 exports.help = {
-
-  name: 'goldyap',
-
+  name: 'preyap',
   description: 'Gold üye yaparsınız',
-
   usage: 'goldyap <ID>'
-
 };
