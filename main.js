@@ -88,6 +88,7 @@ client.elevation = message => {
   if (message.member.permissions.has("MANAGE_MESSAGES")) permlvl = 1;
   if (message.member.permissions.has("BAN_MEMBERS")) permlvl = 2;
   if (message.member.permissions.has("ADMINISTRATOR")) permlvl = 2;
+  if (message.author.id === message.guild.owner.id) permlvl = 4;
   return permlvl;
 };
 
@@ -103,7 +104,6 @@ logs(client);
 
 
 client.on('ready', async () => {
-client.user.setPresence({ activity: { name: `Clarisa V12 Uptime Botu`, type: "STREAMING", url: "TWİTCH URL" } })
 client.user.setStatus('online');
 console.log(`${client.user.username} ismiyle bağlandım.`);
 })
@@ -150,13 +150,13 @@ let log = guild.channels.cach.eget(logFetch);
 if(oldUser.username === newUser.username) return;
 if(newUser.username.includes(tag) && !oldUser.username.includes(tag)) {
 log.send(new Discord.MessageEmbed()
-.setTitle('Clarisa - TAG Alındı.')
+.setTitle('CloudUP - TAG Alındı.')
 .setDescription(`${newUser} **Aramıza hoşgeldin. \`${tag}\` tagını aldığı için ${role} rolü verildi!**`));
 guild.members.cache.get(newUser.id).roles.add(role.id);
 }
 if(oldUser.username.includes(tag) && !newUser.username.includes(tag)) {
 log.send(new Discord.MessageEmbed()
-.setTitle('Clarisa - TAG Çıkarıldı.')
+.setTitle('CloudUP - TAG Çıkarıldı.')
 .setColor('#f1c335')
 .setDescription(`${newUser} **Aramızdan ayrıldı. \`${tag}\` tagını çıkardığı için ${role} rolü alındı!**`));
 guild.members.cache.get(newUser.id).roles.remove(role.id);
@@ -454,43 +454,5 @@ if(command) {
 message.channel.send(`${message.author} ${command.respond}`);
 };
 });
-// CHAT LOG \
-client.on("messageDelete", async message => {
-  if (message.author.bot) return;
 
-  var yapan = message.author;
-//Cross
-  var kanal = await db.fetch(`chatlog_${message.guild.id}`);
-  if (!kanal) return;
-  var kanalbul = message.guild.channels.find("name", kanal);
-//Cross
-  const chatembed = new Discord.RichEmbed()
-    .setColor("RANDOM")
-    .setAuthor(`Bir Mesaj Silindi!, yapan.avatarURL`)
-    .addField("Kullanıcı Tag", yapan.tag, true)
-    .addField("ID", yapan.id, true)
-    .addField("Silinen Mesaj", "" + message.content + "")
-    .setThumbnail(yapan.avatarURL);
-  kanalbul.send(chatembed);
-});
-//Cross
-client.on("messageUpdate", async (oldMsg, newMsg) => {
-  if (oldMsg.author.bot) return;
-
-  var yapan = oldMsg.author;
-
-  var kanal = await db.fetch(`chatlog_${oldMsg.guild.id}`);
-  if (!kanal) return;
-  var kanalbul = oldMsg.guild.channels.find("name", kanal);
-//Cross
-  const chatembed = new Discord.RichEmbed()
-    .setColor("RANDOM")
-    .setAuthor(`Bir Mesaj Düzenlendi!, yapan.avatarURL`)
-    .addField("Kullanıcı Tag", yapan.tag, true)
-    .addField("ID", yapan.id, true)
-    .addField("Eski Mesaj", "" + oldMsg.content + "")
-    .addField("Yeni Mesaj", "" + newMsg.content + "")
-    .setThumbnail(yapan.avatarURL);
-  kanalbul.send(chatembed);
-});
 client.login(client.ayarlar.token);
