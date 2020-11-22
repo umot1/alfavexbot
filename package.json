@@ -2,10 +2,10 @@
   "name": "hello-express",
   "version": "1.0.0",
   "description": "Gweep Creative#0001 | arroiz",
-  "main": "arroiz.js",
+  "main": "main.js",
   "scripts": {
-    "watch": "nodemon arroiz.js",
-    "start": "node arroiz.js"
+    "watch": "nodemon main.js",
+    "start": "node main.js"
   },
   "dependencies": {
     "canvacord": "^5.0.7",
