@@ -7,7 +7,7 @@ exports.run = async (client, message, args) => {
   }
 
 let images = ['https://media.giphy.com/media/mBkM18U5OMSkTcDmeu/giphy.gif', 'https://media.giphy.com/media/RGRzukK0YNlQbZEUVP/giphy.gif'];
-message.channel.send(new Discord.MessageEmbed().setColor('#000001').setDescription(`\`\`\`Clarisa Diğer Kullanabileceğin Komutlar Aşağıda Yer Almakta.\`\`\`
+message.channel.send(new Discord.MessageEmbed().setColor('#000001').setDescription(`\`\`\`Vex Diğer Kullanabileceğin Komutlar Aşağıda Yer Almakta.\`\`\`
 
 🐦 \`${client.ayarlar.prefix}av\`
 **Kullanıcının profilinde ki fotoğrafı gösterir**
@@ -19,19 +19,19 @@ message.channel.send(new Discord.MessageEmbed().setColor('#000001').setDescripti
 **Cihaz başında olmadığınız süre için kullanırsın**
 
 ☁️ \`${client.ayarlar.prefix}davet\`
-**Clarisa bağlantılarını gönderir**
+**Vex bağlantılarını gönderir**
 
 📋 \`${client.ayarlar.prefix}kurallar\`
-**Clarisa hazır tema ile kurallarınızı yerleştirir**
+**Vex hazır tema ile kurallarınızı yerleştirir**
 
 🌟 \`${client.ayarlar.prefix}yavaş-mod\`
-**Clarisa üyelerinizin belirlediğiniz sürede bir mesaj yazmasını sağlar**
+**Vex üyelerinizin belirlediğiniz sürede bir mesaj yazmasını sağlar**
 
 \`${client.ayarlar.prefix}emote\`
 **Emoji URL veya Emoji girerek eğlenceli emojinin çizilimini atar**
 
 🐝 \`${client.ayarlar.prefix}emoji\`
-**Clarisa sunucunda ki emoji ismini yaz sana indirme bağlantısı verir**
+**Vex sunucunda ki emoji ismini yaz sana indirme bağlantısı verir**
 
 🔞 \`${client.ayarlar.prefix}nsfw\`
 **Cinsel içerikler içeride seni bekliyor**
@@ -46,13 +46,13 @@ message.channel.send(new Discord.MessageEmbed().setColor('#000001').setDescripti
 **Belirli sesli kanalda ki kullanıcıyı yanına çekmeni sağlar ve kişiyi sesten atmanı sağlar. Seste yanına gitmeni sağlar**
 
 💐 \`${client.ayarlar.prefix}rol-renk\`
-**Clarisa Telefon kullananlar için Rol Renk değiştirme**
+**Vex Telefon kullananlar için Rol Renk değiştirme**
 
 🗑 \`${client.ayarlar.prefix}sil [100]\`
-**Clarisa bot kanaldaki mesajları siler**
+**Vex bot kanaldaki mesajları siler**
 
 \`${client.ayarlar.prefix}ayrıl\`
-**Clarisa ile kurmuş olduğunuz ayarlarınızı sıfırlayarak sunucundan çıkar**`).setThumbnail('https://media.giphy.com/media/3qXi5eIvcgCmTDObOU/giphy.gif'));
+**Vex ile kurmuş olduğunuz ayarlarınızı sıfırlayarak sunucundan çıkar**`).setThumbnail('https://media.giphy.com/media/3qXi5eIvcgCmTDObOU/giphy.gif'));
 
 };
 exports.conf = {

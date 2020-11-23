@@ -10,12 +10,12 @@ exports.run = async (client, message, args) => {
   if(!args[0]) return message.channel.send(new Discord.MessageEmbed().setColor('#00567e')
   .setTitle(`**Bir \`ROL ID\` veya \`ROL\` etiketlemeyi unuttunuz.**
   
-  **Örnek: \`c!rol-renk 663408945716658xxx WHITE\`**`));
+  **Örnek: \`v!rol-renk 663408945716658xxx WHITE\`**`));
   role = message.guild.roles.cache.get(args[0]);
   if(!role) return message.channel.send(new Discord.MessageEmbed().setColor('#00567e')
   .setTitle(`**Bir \`ROL ID\` veya \`ROL\` etiketlemeyi unuttunuz.**
   
-  **Örnek: \`c!rol-renk 663408945716658xxx WHITE\`**`)); 
+  **Örnek: \`v!rol-renk 663408945716658xxx WHITE\`**`)); 
   } else {
   role = message.mentions.roles.first(); 
   }
@@ -23,7 +23,7 @@ exports.run = async (client, message, args) => {
   if(!args[1]) return message.channel.send(new Discord.MessageEmbed().setColor('#00567e')
 .setTitle(`**Bir \`Büyük Renk İsmi\` & RENK KOD: \`FFC0CB\` koymayı unuttunuz.**
 
-**Örnek: \`c!rol-renk 663408945716658xxx PURPLE\`**`));
+**Örnek: \`v!rol-renk 663408945716658xxx PURPLE\`**`));
 
 let renk = args[1].replace('mavi', '#6999ff')
 .replace('yeşil', '#69ff80')

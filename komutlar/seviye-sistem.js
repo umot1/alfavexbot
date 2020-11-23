@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const data = require('quick.db');
 
 exports.run = async (client, message, args) => {
-if(!args[0]) return message.channel.send(new Discord.MessageEmbed().setTitle('Açmak ve kapatmak için: [ -seviye aç / -seviye kapat ]').setDescription('>>> `c!rank` `c!rank [@Etiket]` `(c!seviye - c!level)`\n`c!sıralama` `(c!top - c!toplist)`'))
+if(!args[0]) return message.channel.send(new Discord.MessageEmbed().setTitle('Açmak ve kapatmak için: [ -seviye aç / -seviye kapat ]').setDescription('>>> `v!rank` `v!rank [@Etiket]` `(v!seviye - v!level)`\n`v!sıralama` `(v!top - v!toplist)`'))
 
 };
 exports.conf = {

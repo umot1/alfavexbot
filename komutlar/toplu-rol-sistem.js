@@ -3,7 +3,7 @@ const data = require('quick.db');
 
 exports.run = async (client, message, args) => {
 
-message.channel.send(new Discord.MessageEmbed().setTitle('Clarisa Toplu Rol Sistem').setDescription(`
+message.channel.send(new Discord.MessageEmbed().setTitle('Vex Toplu Rol Sistem').setDescription(`
 ☀️ \`${client.ayarlar.prefix}tra\`
 Sunucunuzda ki üyelerin üzerinde olan **ROL ID** girerek hepsinden rolü kaldırır
 

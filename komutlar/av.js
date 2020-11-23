@@ -29,6 +29,6 @@ exports.help = {
   name: 'avatar',
   category: 'kullanıcı',
   description: 'Belirtilen Kişinin veya Komutu Yazan Kişinin Avatarını Atar.',
-  usage: 'c!avatar <@kişi-etiket> veya r?avatar'
+  usage: 'v!avatar <@kişi-etiket> veya r?avatar'
 };
 //Wenzy Code

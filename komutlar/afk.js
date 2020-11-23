@@ -10,7 +10,7 @@ exports.run = function(client, message, args) {
   .setColor('RED')
   .setAuthor(message.author.username, message.author.avatarURL)
   .setDescription(`Afk Olmak İçin Bir Sebep Belirtin.\n\n Örnek Kullanım : ${prefix}afk <sebep>`)
-  .setFooter("Clarisa")
+  .setFooter("Vex")
   if(!salvosebep) return message.channel.send(embed)
   db.set(`afk_${salvokullanıcı.id}`, salvosebep);
   db.set(`afk_süre_${salvokullanıcı.id}`, Date.now());
@@ -18,7 +18,7 @@ exports.run = function(client, message, args) {
   .setColor('GREEN')
   .setAuthor(message.author.username, message.author.avatarURL)
   .setDescription(`Afk Moduna Başarıyla Girildi. Afk Olma Sebebi : **${salvosebep}**`)
-  .setFooter("Clarisa")
+  .setFooter("Vex")
   message.channel.send(afk) 
 };
  
@@ -32,7 +32,7 @@ exports.conf = {
 exports.help = {
   name: 'afk',
   description: 'Afk Olmanızı Sağlar',
-  usage: 'c!afk <sebep>'
+  usage: 'v!afk <sebep>'
 };
 
 //SAFE CODE ❤ #1.5K

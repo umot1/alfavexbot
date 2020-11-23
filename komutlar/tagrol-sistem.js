@@ -5,7 +5,7 @@ exports.run = async (client, message, args) => {
 
 message.channel.send(new Discord.MessageEmbed()
 .setColor('#000001')
-.setTitle('Clarisa Tag Rol & Kanal')
+.setTitle('Vex Tag Rol & Kanal')
 .setDescription(`\`${client.ayarlar.prefix}rol-tag 🚀\`
 **Lütfen tag ayarlayınız başlamadan önce**
 

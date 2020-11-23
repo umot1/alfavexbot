@@ -4,15 +4,15 @@ const data = require('quick.db');
 exports.run = async (client, message, args) => {
 
 message.channel.send(new Discord.MessageEmbed()
-.setTitle('Clarisa Kısıtlı Koruma')
-.addField("️:tools: c!fal","Dene Ve Gör",true)
-.addField(":tools: c!aşk","Dene Ve Gör",true)
-.addField(":tools: c!soda","Dene Ve Gör",true)
-.addField(":tools: c!tokat","Dene Ve Gör",true)   
-.addField("️:tools: c!kare","Dene Ve Gör",true)
-.addField(":tools: c!öp","Dene Ve Gör",true)
-.addField(":tools: c!karıştır","Dene Ve Gör",true)
-.addField(":tools: c!kaçcm","Dene Ve Gör",true)                      
+.setTitle('Vex Kısıtlı Koruma')
+.addField("️:tools: v!fal","Dene Ve Gör",true)
+.addField(":tools: v!aşk","Dene Ve Gör",true)
+.addField(":tools: v!soda","Dene Ve Gör",true)
+.addField(":tools: v!tokat","Dene Ve Gör",true)   
+.addField("️:tools: v!kare","Dene Ve Gör",true)
+.addField(":tools: v!öp","Dene Ve Gör",true)
+.addField(":tools: v!karıştır","Dene Ve Gör",true)
+.addField(":tools: v!kaçcm","Dene Ve Gör",true)                      
 .setThumbnail(message.author.avatarURL() ? message.author.avatarURL({dynamic: true}) : 'botresim'));
 
 };
