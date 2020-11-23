@@ -2,7 +2,7 @@ const Discord = require ("discord.js")
 
 module.exports.run = async (client, message, args) => {
 
-  const YeniYardımMenüm = new Discord.MessageEmbed()
+  const yardım = new Discord.MessageEmbed()
 .setColor("#6d09e8")
 .setDescription(`:joy: Botumuz İsteklerinizle Güzelleşiyor`)
 .addField("️:tools: c!yardim-kayit","Kayıt Sistemini Görürsünüz.",true)
@@ -12,7 +12,7 @@ module.exports.run = async (client, message, args) => {
 .addField(":tools: c!davet","Botu Sunucunuza Davet Edersiniz",true)  
 .addField(":joy: İninal Barkod NO: \`Yakında\` :joy:",true)
 .addField(":joy: Papara Hesap NO: \`Yakında\` :joy:",true)  
-    message.channel.send(YeniYardımMenüm)
+    message.channel.send(yardım)
 
     
 };
