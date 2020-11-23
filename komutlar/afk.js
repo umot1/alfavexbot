@@ -1,25 +1,42 @@
-const Discord = require('discord.js');
-const data = require('quick.db');
-
-exports.run = async (client, message, args) => {
-
-if(message.author.id === message.guild.owner.user.id) return message.channel.send(new Discord.MessageEmbed().setTitle('**Seni gidi seni, Sunucu sahibisin sana __AFK__ yakışmaz ^^**'));
-if(!args[0]) reason = 'Bilgi verilmedi.';
-if(args[0]) reason = args[0];
-
-message.channel.send(new Discord.MessageEmbed().setThumbnail(message.author.avatarURL() ? message.author.avatarURL({dynamic: true}) : 'https://cdn.glitch.com/8e70d198-9ddc-40aa-b0c6-ccb4573f14a4%2F6499d2f1c46b106eed1e25892568aa55.png').setTitle(`${client.user.username} - Away From Keyboard`).setDescription(`${message.author} **Üyesi Bilgisayar başında & Klavye başında değil**!\n\n• **Sebep:** \`${reason}\``)).then(a => a.delete({timeout: 10000}));
-data.set(`name.${message.author.id}.${message.guild.id}`, message.member.displayName);
-message.member.setNickname('[AFK] '+message.member.displayName);
-data.set(`kullanıcı.${message.author.id}.${message.guild.id}`, reason);
-
+const Discord = require("discord.js");
+const db = require("quick.db");
+const ayarlar = require('../ayarlar.json')
+let prefix = ayarlar.prefix
+ 
+exports.run = function(client, message, args) { 
+  var salvokullanıcı = message.author;
+  var salvosebep = args.slice(0).join("  ");
+  const embed = new Discord.MessageEmbed()
+  .setColor('RED')
+  .setAuthor(message.author.username, message.author.avatarURL)
+  .setDescription(`Afk Olmak İçin Bir Sebep Belirtin.\n\n Örnek Kullanım : ${prefix}afk <sebep>`)
+  .setFooter("Clarisa")
+  if(!salvosebep) return message.channel.send(embed)
+  db.set(`afk_${salvokullanıcı.id}`, salvosebep);
+  db.set(`afk_süre_${salvokullanıcı.id}`, Date.now());
+  const afk = new Discord.MessageEmbed()
+  .setColor('GREEN')
+  .setAuthor(message.author.username, message.author.avatarURL)
+  .setDescription(`Afk Moduna Başarıyla Girildi. Afk Olma Sebebi : **${salvosebep}**`)
+  .setFooter("Clarisa")
+  message.channel.send(afk) 
 };
+ 
 exports.conf = {
   enabled: true,
   guildOnly: true,
-  aliases: [],
+  aliases: ["afk","afkol","afk-ol"],
   permLevel: 0
-}
-
-exports.help = {
-  name: 'afk'
 };
+ 
+exports.help = {
+  name: 'afk',
+  description: 'Afk Olmanızı Sağlar',
+  usage: 'c!afk <sebep>'
+};
+
+//SAFE CODE ❤ #1.5K
+
+//SALVO CODE ❤ #1.6K
+
+//GÜLE GÜLE KULLAN DOSTUM :) ❤ 
